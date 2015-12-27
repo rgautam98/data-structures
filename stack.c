@@ -1,4 +1,4 @@
-/* to perform the insertion, sorting and the deletion in an array */
+/* to perform the insertion, sorting and the deletion, and some more things, in an array of any size.  */
 
 
 
@@ -9,7 +9,11 @@
 #define True 1
 #define False 0
 
-int main()
+
+//long long ago; // IN A GALAXY FAR FAR AWAY, A function called
+
+
+int main(void)
 {
     int n;
      FILE *rg;
@@ -31,8 +35,9 @@ int main()
    {
 
     system("clear");
-    printf("Press\n\n\t 1. To insert,\n\n\t 2. To append,\n\n\t 3. For sorting,\n\n\t");
-    printf(" 4. For deletion,\n\n\t 5. To traverse the elements of the array\n\n\t 6. To quit the application\n\n\t");
+    printf("Press\n\n\t 1. To insert,\n\n\t 2. To append,\n\n\t 3. For sorting,\n\n\t 4. For deletion,\n\n\t");
+   printf(" 5. To traverse the elements of the array\n\n\t 6. To clear the data and give new input\n\n\t"); 
+   printf("7. To quit the application\n\n\t");
     scanf("%d",&i);
     i--;
      system("clear");
@@ -44,15 +49,15 @@ int main()
     //int index;
 
     x:
-    printf("Enter the position of the element you want to insert to (starting from 1, to %d):  ",n);
+    printf("Enter the index you want to insert to (starting from 0, to %d):  ",n);
     scanf("%d",&index);
-    index--;
-    if(index>=n)
+    //index--;
+    if(index>n)
     {
-      printf("This is way out of the limit. Please try again\n\n");
+      printf("That index, my friend, is way out of the range. Please try again\n\n");
       goto x;
     }
-    printf(" \n\nEnter the element you want to insert to:  ");
+    printf(" \n\nEnter the element:  ");
     scanf("%d",&inse);
 
     n++;
@@ -68,14 +73,16 @@ int main()
      ////////////////////////////  APPEND  ////////////////////////////////////////////////////
 
      else if(i==1){ //appending
-    printf(" \n\nEnter the element you want to insert to:  ");
+    printf(" \n\nEnter the element:  ");
     scanf("%d",&inse);
 
     n++;
     realloc(a,n*sizeof(int));
     a[n-1]=inse;
     }
-//////////////////////////////  SORTING      ////////////////////////////////////////////////////////////
+
+     ///////////////////////////////////  SORT  /////////////////////////////////////////////////////////
+
     else if(i==2) // sorting
     {
      for(i=0;i<n;i++)
@@ -93,11 +100,7 @@ int main()
          scanf("%d",&inse);
          for(i=0;i<n;i++)
             if(a[i]==inse)
-            {
-                 flag=1;
-                 k=i;
-            }
-
+                 flag=1,k=i;
         if(flag)
        {
          for(j=k;j<n;j++)
@@ -105,7 +108,7 @@ int main()
 
          n--;
          realloc(a,n*sizeof(int));
-         printf("\n\nThe element deleted\n\n");
+         printf("\n\nElement deleted\n\n");
        }
        else
        {
@@ -117,17 +120,37 @@ int main()
   else if(i==4)
   {
         printf("\n\n The elements are:\n\n");
-        printf("__________________________________________________________________\n\n");
+        printf("====================================================================================================\n\n");
         for(i=0;i<n;i++)
              printf(" %d  ",a[i]);
 
-        printf("\n\n__________________________________________________________________");
+        printf("\n\n======================================================================================================");
+
+  }
+
+  ///////////////////////////////    CLEAR THE MEMORY        ////////////////////////////////////////////////////////////
+  
+  else if(i==5)
+  {
+     printf("Are you absolutely sure that you want to delete the data in the stack.");
+     printf(" Press \" 1 \" to confirm or \" 2  \" to quit.\n\n\t");
+     scanf("%d",&j);
+
+     if(j==1)
+     {
+        free(a);
+        printf("\n\nThe memory has been cleared. \n\n");  // Please Enter the new size of the stack.\n\n\t");
+        a = (int *)malloc(1*sizeof(int));
+        n=0;
+        printf("The new stack has been created. You can now head to the main menu to add new elements to the stack.\n\n");
+
+     }
 
   }
 
 
 ///////////////////////////////////         EXIT        //////////////////////////////////////////////////////////
-  else if(i==5)
+  else if(i==6)
   {
      printf("You are now quitting the application \n\nPress \" 1  \" to save the data or \"  2  \" to quit without saving      ");
      scanf("%d",&i);
@@ -162,3 +185,7 @@ int main()
   }
    return 0;
 }
+
+// Did all the above said functions, in a C program.
+//
+// I'snt it Awesome!!!
