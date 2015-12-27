@@ -32,7 +32,7 @@ int main()
 
     system("clear");
     printf("Press\n\n\t 1. To insert,\n\n\t 2. To append,\n\n\t 3. For sorting,\n\n\t");
-    printf(" 4. For deletion,\n\n\t 5. To traverse the elements of the array\n\n\t 7. To quit the application\n\n\t");
+    printf(" 4. For deletion,\n\n\t 5. To traverse the elements of the array\n\n\t 6. To quit the application\n\n\t");
     scanf("%d",&i);
     i--;
      system("clear");
@@ -88,21 +88,24 @@ int main()
 ////////////////////////////////////////   DELETE    ////////////////////////////////////////////////////////
      else if(i==3)
      {
-         int flag=0;
+         int flag=0,k;
          printf("Enter the element you want to delete:   ");
          scanf("%d",&inse);
          for(i=0;i<n;i++)
             if(a[i]==inse)
+            {
                  flag=1;
+                 k=i;
+            }
 
         if(flag)
        {
-         for(j=i;j<n;j++)
+         for(j=k;j<n;j++)
                 a[j]=a[j+1];
 
          n--;
          realloc(a,n*sizeof(int));
-         printf("\n\nElement deleted\n\n");
+         printf("\n\nThe element deleted\n\n");
        }
        else
        {
