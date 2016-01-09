@@ -1,6 +1,7 @@
 # data-structures
 
-[![Join the chat at https://gitter.im/rgautam98/data-structures](https://badges.gitter.im/rgautam98/data-structures.svg)](https://gitter.im/rgautam98/data-structures?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/rgautam98/data-structures](https://badges.gitter.im/rgautam98/data-structures.svg)](https://gitter.im/rgautam98/data-structures?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
+
 This repository contains some non-standard headerfiles, the docummentaton for the functions in the header and some 
 programs , related to data structures.  
 
