@@ -9,7 +9,9 @@ All of these are implimeneted in C and C++.
 
 The headerfile, and the docummentation can be found in the respective language/topic-name  directory.  
 
-Apart form the traditioal functions, the headerfiles here contatin some new functions, created by me, and I also have the docummentation for them so do not worry.  
+Apart form the traditional functions, the headerfiles here contatin some new functions, along with docummentation.  
+
+The **C** directory contains the headers and fubctions implimented in the C programming language.
 
 #LICENSE
 
