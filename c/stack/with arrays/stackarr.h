@@ -1,5 +1,24 @@
 /*
+
+           Copyright (C) 2016, B.Raghavendra Gautam (rgautam98)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+
  Header File for the implimentation of the stack operations in the C/C++ program
+
+The Docummentation for the header file can be obtained at:
+
+https://github.com/rgautam98/data-structures/blob/master/c/stack/with%20arrays/README.md
+
 */
 
 #ifndef STACKARR_H
